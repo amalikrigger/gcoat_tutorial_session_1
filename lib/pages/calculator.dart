@@ -14,145 +14,157 @@ class _CalculatorState extends State<Calculator> {
       backgroundColor: Color(0xFF17171C),
       body: SafeArea(
         child: Padding(
-            padding: EdgeInsets.all(16),
-            child: Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    '3156.8',
-                    style: TextStyle(
-                      fontSize: 75,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w400,
+          padding: EdgeInsets.all(16),
+          child: Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(
+                  '3156.8',
+                  style: TextStyle(
+                    fontSize: 75,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: CalculatorButton(
+                        text: 'C',
+                      ),
                     ),
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: CalculatorButton(
-                          text: 'C',
-                        ),
+                    Expanded(
+                      child: CalculatorButton(
+                        text: '+/-',
+                        fontSize: 20,
                       ),
-                      Expanded(
-                        child: CalculatorButton(
-                          text: '+/-',
-                          fontSize: 20,
-                        ),
+                    ),
+                    Expanded(
+                      child: CalculatorButton(
+                        text: '%',
                       ),
-                      Expanded(
-                        child: CalculatorButton(
-                          text: '%',
-                        ),
+                    ),
+                    Expanded(
+                      child: CalculatorButton(
+                        text: '/',
+                        color: Color(0xFF5A32E7),
                       ),
-                      Expanded(
-                        child: CalculatorButton(
-                          text: '/',
-                          color: Color(0xFF5A32E7),
-                        ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: CalculatorButton(
+                        color: Color(0xFF2E2F38),
+                        text: '7',
                       ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: CalculatorButton(
-                          text: '7',
-                        ),
+                    ),
+                    Expanded(
+                      child: CalculatorButton(
+                        color: Color(0xFF2E2F38),
+                        text: '8',
                       ),
-                      Expanded(
-                        child: CalculatorButton(
-                          text: '8',
-                        ),
+                    ),
+                    Expanded(
+                      child: CalculatorButton(
+                        color: Color(0xFF2E2F38),
+                        text: '9',
                       ),
-                      Expanded(
-                        child: CalculatorButton(
-                          text: '9',
-                        ),
+                    ),
+                    Expanded(
+                      child: CalculatorButton(
+                        text: 'x',
+                        color: Color(0xFF5A32E7),
                       ),
-                      Expanded(
-                        child: CalculatorButton(
-                          text: 'x',
-                          color: Color(0xFF5A32E7),
-                        ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: CalculatorButton(
+                        color: Color(0xFF2E2F38),
+                        text: '4',
                       ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: CalculatorButton(
-                          text: '4',
-                        ),
+                    ),
+                    Expanded(
+                      child: CalculatorButton(
+                        color: Color(0xFF2E2F38),
+                        text: '5',
                       ),
-                      Expanded(
-                        child: CalculatorButton(
-                          text: '5',
-                        ),
+                    ),
+                    Expanded(
+                      child: CalculatorButton(
+                        color: Color(0xFF2E2F38),
+                        text: '6',
                       ),
-                      Expanded(
-                        child: CalculatorButton(
-                          text: '6',
-                        ),
+                    ),
+                    Expanded(
+                      child: CalculatorButton(
+                        text: '-',
+                        color: Color(0xFF5A32E7),
                       ),
-                      Expanded(
-                        child: CalculatorButton(
-                          text: '-',
-                          color: Color(0xFF5A32E7),
-                        ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: CalculatorButton(
+                        color: Color(0xFF2E2F38),
+                        text: '1',
                       ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: CalculatorButton(
-                          text: '1',
-                        ),
+                    ),
+                    Expanded(
+                      child: CalculatorButton(
+                        color: Color(0xFF2E2F38),
+                        text: '2',
                       ),
-                      Expanded(
-                        child: CalculatorButton(
-                          text: '2',
-                        ),
+                    ),
+                    Expanded(
+                      child: CalculatorButton(
+                        color: Color(0xFF2E2F38),
+                        text: '3',
                       ),
-                      Expanded(
-                        child: CalculatorButton(
-                          text: '3',
-                        ),
+                    ),
+                    Expanded(
+                      child: CalculatorButton(
+                        text: '+',
+                        color: Color(0xFF5A32E7),
                       ),
-                      Expanded(
-                        child: CalculatorButton(
-                          text: '+',
-                          color: Color(0xFF5A32E7),
-                        ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: CalculatorButton(
+                        color: Color(0xFF2E2F38),
+                        text: '0',
                       ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        flex: 2,
-                        child: CalculatorButton(
-                          text: '0',
-                        ),
+                    ),
+                    Expanded(
+                      child: CalculatorButton(
+                        color: Color(0xFF2E2F38),
+                        text: '.',
                       ),
-                      Expanded(
-                        child: CalculatorButton(
-                          text: '.',
-                        ),
+                    ),
+                    Expanded(
+                      child: CalculatorButton(
+                        text: '=',
+                        color: Color(0xFF5A32E7),
                       ),
-                      Expanded(
-                        child: CalculatorButton(
-                          text: '=',
-                          color: Color(0xFF5A32E7),
-                        ),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            )),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -180,7 +192,7 @@ class CalculatorButton extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.2),
-            spreadRadius: 16,
+            spreadRadius: 8,
             blurRadius: 10,
             offset: const Offset(0, 3),
           ),
