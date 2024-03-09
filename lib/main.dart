@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gcoat_tutorial_session_1/pages/calculator.dart';
+import 'package:gcoat_tutorial_session_1/pages/calculator2.dart';
 import 'package:gcoat_tutorial_session_1/pages/input.dart';
 
 import 'pages/counter.dart';
@@ -408,6 +409,7 @@ class _DemoAppState extends State<DemoApp> {
           Counter(),
           Calculator(),
           Input(),
+          Calculator2(),
         ],
       ),
     );
