@@ -193,7 +193,7 @@ class CalculatorButton extends StatelessWidget {
           BoxShadow(
             color: Colors.black.withOpacity(0.2),
             spreadRadius: 8,
-            blurRadius: 10,
+            blurRadius: 6,
             offset: const Offset(0, 3),
           ),
         ],
