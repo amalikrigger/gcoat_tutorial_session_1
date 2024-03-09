@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gcoat_tutorial_session_1/pages/calculator.dart';
-import 'package:gcoat_tutorial_session_1/pages/todo.dart';
+import 'package:gcoat_tutorial_session_1/pages/input.dart';
 
 import 'pages/counter.dart';
 
@@ -324,6 +324,15 @@ class MyApp extends StatelessWidget {
     var sum = number! + 5;
     print(sum);
 
+    List<int>? numbers1 = [1, 2, 3, 4, 5];
+    List<int>? numbers2;
+
+    int? firstElement1 = numbers1?.first;
+    int? firstElement2 = numbers2?.first;
+
+    print("First Element 1: $firstElement1"); // Output: First Element 1: 1
+    print("First Element 2: $firstElement2");
+
     CLASS
 
     class Person {
@@ -396,9 +405,9 @@ class _DemoAppState extends State<DemoApp> {
       debugShowCheckedModeBanner: false,
       home: PageView(
         children: const [
-          Calculator(),
           Counter(),
-          Todo(),
+          Calculator(),
+          Input(),
         ],
       ),
     );

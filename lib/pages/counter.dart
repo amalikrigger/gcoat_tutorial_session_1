@@ -18,16 +18,12 @@ class _CounterState extends State<Counter> {
         title: const Text('Flutter Demo Home Page'),
         backgroundColor: Colors.lightBlue,
       ),
-      body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(
-              _counter.toString(),
-              style: const TextStyle(fontSize: 40),
-            ),
-          ],
+      body: SafeArea(
+        child: Center(
+          child: Text(
+            _counter.toString(),
+            style: const TextStyle(fontSize: 40),
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
