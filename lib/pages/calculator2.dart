@@ -17,7 +17,7 @@ class _CalculatorState extends State<Calculator2> {
           padding: const EdgeInsets.all(16),
           child: Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 const Text(
