@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gcoat_tutorial_session_1/pages/calculator.dart';
-import 'package:gcoat_tutorial_session_1/pages/calculator2.dart';
 import 'package:gcoat_tutorial_session_1/pages/experiment.dart';
-import 'package:gcoat_tutorial_session_1/pages/input.dart';
-import 'package:gcoat_tutorial_session_1/pages/todo.dart';
+import 'package:gcoat_tutorial_session_1/pages/home.dart';
+import 'package:gcoat_tutorial_session_1/pages/profile.dart';
+import 'package:gcoat_tutorial_session_1/pages/settings.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-
-import 'pages/counter.dart';
 
 void main() async {
   await Hive.initFlutter();
@@ -407,16 +404,12 @@ class DemoApp extends StatelessWidget {
         colorSchemeSeed: const Color(0xFFFFEB3B),
         useMaterial3: true,
       ),
-      home: PageView(
-        children: const [
-          Todo(),
-          Experiment(),
-          Counter(),
-          Calculator(),
-          Input(),
-          Calculator2(),
-        ],
-      ),
+      routes: {
+        '/': (context) => const Experiment(),
+        'homePage': (context) => const HomePage(),
+        'settingsPage': (context) => const SettingsPage(),
+        'profilePage': (context) => const ProfilePage(),
+      },
     );
   }
 }
