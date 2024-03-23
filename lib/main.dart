@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:gcoat_tutorial_session_1/pages/calculator.dart';
 import 'package:gcoat_tutorial_session_1/pages/calculator2.dart';
+import 'package:gcoat_tutorial_session_1/pages/experiment.dart';
 import 'package:gcoat_tutorial_session_1/pages/input.dart';
+import 'package:gcoat_tutorial_session_1/pages/todo.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 import 'pages/counter.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
+  var box = await Hive.openBox('mybox');
   runApp(const DemoApp());
-  print(1 * 3);
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -392,20 +396,21 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class DemoApp extends StatefulWidget {
+class DemoApp extends StatelessWidget {
   const DemoApp({super.key});
 
-  @override
-  State<DemoApp> createState() => _DemoAppState();
-}
-
-class _DemoAppState extends State<DemoApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorSchemeSeed: const Color(0xFFFFEB3B),
+        useMaterial3: true,
+      ),
       home: PageView(
         children: const [
+          Todo(),
+          Experiment(),
           Counter(),
           Calculator(),
           Input(),
